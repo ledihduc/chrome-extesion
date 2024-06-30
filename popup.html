@@ -1,53 +1,25 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Words Saver</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
 
-<head>
-    <title>Text Highlighter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        .close-button {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close-button:hover,
-        .close-button:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="highlightModal" class="modal">
-        <div class="modal-content">
-            <!-- <span class="close-button">&times;</span> -->
-            <p>API Key Management</p>
-            <input type="text" id="apiKeyInput" placeholder="API Key">
-            <button id="saveApiKeyButton">Save API Key</button>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <p>API Key Management</p>
+        <!-- <p id="currentApiKey"></p> -->
+        <form class="popup-form">
+          <input type="text" id="apiKey" placeholder="API Key" />
+          <div class="popup-content">
             <button id="deleteApiKeyButton">Delete API Key</button>
-            <p id="currentApiKey"></p>
-        </div>
+            <button id="saveApiKeyButton">Save API Key</button>
+          </div>
+        </form>
+      </div>
     </div>
+    <script src="content.js"></script>
     <script src="popup.js"></script>
-</body>
-
+  </body>
 </html>

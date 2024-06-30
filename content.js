@@ -133,10 +133,19 @@ function saveText(text, description) {
 
 // Lưu API key
 function saveApiKey(apiKey) {
-  chrome.storage.local.set({ apiKey: apiKey }, function () {
-    console.log("API Key is saved:", apiKey);
-    alert("API Key has been saved.");
-  });
+  let alertText = "";
+  if (apiKey === "") {
+    alertText = "API Key has been deleted.";
+  }
+  try {
+    alertText = "API Key is saved:" + apiKey;
+    chrome.storage.local.set({ apiKey: apiKey }, function () {
+      console.log("API Key is saved:", apiKey);
+    });
+  } catch (error) {
+    alertText = "Saved failed: " + error;
+  }
+  alert(alertText);
 }
 
 // Thêm stylesheet cho modal
