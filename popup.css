@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 245px;
+  padding: 0;
+}
+body {
+  background: rgb(141, 194, 111);
+}
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: 0 auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  padding: 20px 30px 30px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form > p {
+  margin-bottom: 5px;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 7px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form .popup-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4caf50;
+  width: 45%;
+  border: 0;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+button#deleteApiKeyButton {
+  background-color: #f44336;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #43a047;
+}

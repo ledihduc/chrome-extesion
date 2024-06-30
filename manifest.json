@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Text Highlighter",
+  "name": "Words Saver",
+  "description": "Extension for saving words on the internet to learn vocabularies.",
   "version": "1.0",
-  "description": "Hiển thị modal với nội dung được bôi đen",
   "permissions": ["activeTab", "storage"],
 
   "content_scripts": [
